@@ -1,8 +1,8 @@
+import { AlertService } from './../../services/alert.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AlertService } from 'src/app/services/alert.service';
 
 @Component({
   selector: 'app-create-product',
@@ -20,6 +20,7 @@ export class CreateProductComponent implements OnInit {
     private alertService: AlertService,
     private http: HttpClient, 
     private formBuilder: FormBuilder,
+    private AlertService: AlertService,
     private router: Router) { }
 
   ngOnInit() {
@@ -39,8 +40,7 @@ export class CreateProductComponent implements OnInit {
     if (this.productForm.invalid) {
       return;
     }
-
-    let fakeForm = {name: '', price: 2};
+    
     let formRaw = this.productForm.getRawValue();
     let productJSON = JSON.stringify(formRaw);
     
@@ -51,7 +51,7 @@ export class CreateProductComponent implements OnInit {
     this.http.post(this.createProductURL, productJSON, {headers: jsonHeader})
       .subscribe(
         response => {
-          console.log(productJSON);
+          this.alertService.successAlert(["Product " + this.productForm.controls.name.value + " was sucessful created."], true);
           this.router.navigate(["list-product"]);
         },
 

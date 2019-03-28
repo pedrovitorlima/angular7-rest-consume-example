@@ -12,11 +12,6 @@ export class ListProductComponent implements OnInit {
   private productURL = "http://localhost:8080/products";
   productsList: any[];
 
-  currentPage = 1;
-  itemsPerPage = 10;
-  pageSize: number;
-
-
   constructor(private http: HttpClient, private alertService: AlertService) { }
 
   ngOnInit() {

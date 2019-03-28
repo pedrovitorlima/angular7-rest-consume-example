@@ -9,14 +9,16 @@ import { AlertType, Alert } from './alert.domain';
 export class AlertService {
 
   private keepAfterRouteChange = false;
-  private subject = new Subject();
+  private subject = new Subject<Alert>();
 
   constructor(private router: Router) {
     router.events.subscribe(event => {
       if (event instanceof NavigationStart) {
-        this.keepAfterRouteChange = false;
-      } else {
-        this.clear();
+        if (this.keepAfterRouteChange) {
+          this.keepAfterRouteChange = false;
+        } else {
+          this.clear();
+        }
       }
     });
   }
@@ -25,10 +27,16 @@ export class AlertService {
     this.subject.next();
   }
 
-  errorAlert(messages : any[], keepAfteerRouteChange = false) {
+  errorAlert(messages : any[], keepAfterRouteChange = false) {
     messages.forEach(message => {
-      this.alert(AlertType.Error, message, keepAfteerRouteChange);
+      this.alert(AlertType.Error, message, keepAfterRouteChange);
     });   
+  }
+
+  successAlert(messages : any[], keepAfterRouteChange = false) {
+    messages.forEach(message => {
+      this.alert(AlertType.Success, message, keepAfterRouteChange);
+    });
   }
 
   alert(type: AlertType, message: string, keepAfterRouteChange = false) {

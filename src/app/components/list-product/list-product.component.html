@@ -1,9 +1,8 @@
-
 <div class="container">
   <br />
   <h2>Product List</h2>
 
-  <table class="table">
+  <table datatable class="table row-border hover">
     <thead>
         <tr>
             <th scope="col">#</th>
@@ -21,10 +20,4 @@
     </tbody>
 
   </table>
-
-  <ngb-pagination
-    [(page)]="currentPage"
-    [pageSize]="itemsPerPage"
-    [collectionSize]="100"></ngb-pagination>
- 
 </div>

@@ -9,9 +9,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
 
-import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AlertComponent } from './components/alert/alert.component';
 import { AlertService } from './services/alert.service';
+import { DataTablesModule } from 'angular-datatables';
+
 
 
 
@@ -28,7 +30,7 @@ import { AlertService } from './services/alert.service';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule.forRoot(), //boostrap web components, like alert <ngb-alert>
-    NgbPaginationModule,
+    DataTablesModule,
     AppRoutingModule
   ],
   providers: [
