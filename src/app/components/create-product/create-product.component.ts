@@ -57,7 +57,7 @@ export class CreateProductComponent implements OnInit {
 
         error => {
           this.alertService.errorAlert(<any>error.error.errors);
-        })
-  }
-      
+        }
+      )
+  }      
 }

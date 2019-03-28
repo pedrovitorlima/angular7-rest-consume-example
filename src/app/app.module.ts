@@ -9,7 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CreateProductComponent } from './components/create-product/create-product.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
 
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule, NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 import { AlertComponent } from './components/alert/alert.component';
 import { AlertService } from './services/alert.service';
 
@@ -28,6 +28,7 @@ import { AlertService } from './services/alert.service';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule.forRoot(), //boostrap web components, like alert <ngb-alert>
+    NgbPaginationModule,
     AppRoutingModule
   ],
   providers: [

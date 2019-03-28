@@ -1,8 +1,30 @@
 
-<ul class="list-group">
-  <li
-    *ngFor="let product of productsList" 
-    class="list-group-item">
-    {{ product.name }}
-  </li>
-</ul>
+<div class="container">
+  <br />
+  <h2>Product List</h2>
+
+  <table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let product of productsList" >
+        <td scope="col"></td>
+        <td>{{product.name}}</td>
+        <td>${{product.price}}</td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  <ngb-pagination
+    [(page)]="currentPage"
+    [pageSize]="itemsPerPage"
+    [collectionSize]="100"></ngb-pagination>
+ 
+</div>
