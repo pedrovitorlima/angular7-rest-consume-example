@@ -21,4 +21,4 @@ The `alert.components.ts` and `alert.service.ts` files provides a component and 
 
 ## <a href="#rest-consume">Rest Consume</a>
 This project make use of this Spring Boot Rest Service: 
-<a href="http://github.com/pedrovitorlima/spring-boot-rest-angular7-integration">spring-boot-rest-angular7-integration</a>
+<a href="http://github.com/pedrovitorlima/spring-boot-rest-angular7-integration">spring-boot-rest-angular7-integration</a>  
