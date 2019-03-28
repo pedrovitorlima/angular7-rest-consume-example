@@ -3,7 +3,7 @@
 
 Hey you! This is a simple project that make use of Angular7 to consume rest services and create/list a simple product with price. Besides simple, here we have some interesting things that maybe can help others.
 
-##Table of Contents
+## Table of Contents
 - [Bootstrap Alert Service and Component](#bootstrap-alert)
 - [Bootstrap Angular Datatable](#bootstrap-angular-datatable)
 - [JWT Interceptors](#jwt)
