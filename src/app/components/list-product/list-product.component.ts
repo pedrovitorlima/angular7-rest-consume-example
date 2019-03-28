@@ -19,11 +19,7 @@ export class ListProductComponent implements OnInit {
       .subscribe(
         response => {
           this.productsList = <any>response;
-        },
-
-        error => {
-          this.alertService.errorAlert(["Something went wrong with server :("]);
-        }
+        }        
       );
   }
 }

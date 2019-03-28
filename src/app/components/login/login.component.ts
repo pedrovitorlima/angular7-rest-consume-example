@@ -58,10 +58,13 @@ export class LoginComponent implements OnInit {
       },
 
       error => {
-        if (error.status == 401) {
-          this.alertService.errorAlert(['Invalid credentials.']); 
-        } else {
-          this.alertService.errorAlert(['A error occours while contacting authentication server. Please try again later.']);
+        if (error.status) {
+          if (error.status == 401) {
+            this.alertService.errorAlert(['Invalid credentials.']); 
+          } else {
+            this.alertService.errorAlert(['A error occours while contacting authentication server. Please try again later.']);
+            console.log(error.status);
+          }
         }
       }
     )

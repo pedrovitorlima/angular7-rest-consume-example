@@ -7,7 +7,6 @@ Hey you! This is a simple project that make use of Angular7 to consume rest serv
 - [Bootstrap Alert Service and Component](#bootstrap-alert)
 - [Bootstrap Angular Datatable](#bootstrap-angular-datatable)
 - [JWT Interceptors](#jwt)
-- [Sprint Boot Rest Errors Messages Integration](#spring-boot)
 - [Rest Consume](#rest-consume)
 
 ## <a href="#bootstrap-alert">Bootstrap Alert Service and Component</a>
@@ -24,11 +23,7 @@ This application make use of angular-datatables component. The datatables.net-bs
 - npm install @types/datatables.net --save-dev
 
 ## <a href="#jwt">JWT Interceptors</a>
-@todo
-
-## <a href="#spring-boot">Spring Boot Rest Error Messages Integration</a>
-
-@todo
+The `security.interceptor.ts` is the interceptor responsible for capture response and fill with auth header with login token. After login we dont need to worry about it.
 
 ## <a href="#rest-consume">Rest Consume</a>
 This project make use of this Spring Boot Rest Service: 

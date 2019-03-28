@@ -17,6 +17,7 @@ import { LoginComponent } from './components/login/login.component';
 import { AuthGuard } from './components/login/auth-guard';
 import { TokenInterceptor } from './components/login/security.interceptor';
 import { TokenStorage } from './components/login/token-storage';
+import { ErrorInterceptor } from './components/login/error.interceptor';
 
 
 
@@ -44,6 +45,7 @@ import { TokenStorage } from './components/login/token-storage';
     TokenStorage,
     AlertService,
     {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
   ],
   bootstrap: [AppComponent]
 })
