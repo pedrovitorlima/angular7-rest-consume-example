@@ -5,9 +5,9 @@ Hey you! This is a simple project that make use of Angular7 to consume rest serv
 
 ##Table of Contents
 1. [Tools](#tools)
-2..1  [Bootstrap Alert Service and Component](#bootstrap-alert)
-2.2  [JWT Interceptors](#jwt)
-2.3 [Sprint Boot Rest Errors Messages Integration](#spring-boot)
+-  [Bootstrap Alert Service and Component](#bootstrap-alert)
+-  [JWT Interceptors](#jwt)
+- [Sprint Boot Rest Errors Messages Integration](#spring-boot)
 2. [Rest Consume](#rest-consume)
 
 ## <a href="#tools">Tools</a>
