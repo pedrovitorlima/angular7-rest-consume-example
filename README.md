@@ -1,27 +1,26 @@
-# RestfulCrudProducts
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+# Simple Angular7 and Bootstrap CRUD
 
-## Development server
+Hey you! This is a simple project that make use of Angular7 to consume rest services and create/list a simple product with price. Besides simple, here we have some interesting things that maybe can help others.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##Table of Contents
+1. [Tools](#tools)
+2..1  [Bootstrap Alert Service and Component](#bootstrap-alert)
+2.2  [JWT Interceptors](#jwt)
+2.3 [Sprint Boot Rest Errors Messages Integration](#spring-boot)
+2. [Rest Consume](#rest-consume)
 
-## Code scaffolding
+## <a href="#tools">Tools</a>
+#### <a href="#bootstrap-alert">Bootstrap Alert Service and Component</a>
+The `alert.components.ts` and `alert.service.ts` files provides a component and service to handle bootstrap alert messages.  Instead of handling error messages from your rest service, with this you can just use `AlertService.errorAlert(<any>messages[])` inside your component. Take a look inside `create-product.component.ts` to view a full example.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### <a href="#jwt">JWT Interceptors</a>
+@todo
 
-## Build
+#### <a href="#spring-boot">Spring Boot Rest Error Messages Integration</a>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+@todo
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## <a href="#rest-consume">Rest Consume</a>
+This project make use of this Spring Boot Rest Service: 
+<a href="github.com/pedrovitorlima/spring-boot-rest-angular7-integration">spring-boot-rest-angular7-integration</a>
