@@ -15,12 +15,13 @@ The `alert.components.ts` and `alert.service.ts` files provides a component and 
 
 ## <a href="#bootstrap-angular-datatable">Bootstrap Angular Datatable</a>
 This application make use of angular-datatables component. The datatables.net-bs4 make integration with bootstrap stype. For this, was necessary to edit `app.module.ts` to import `DataTablesModule` and add some elements on style and js attributes inside angular.json (take a look to understand). The `list-product.component.html` has a example. This is the dependencies that I used for:
--npm install jquery --save
--npm install datatables.net --save
--npm install angular-datatables --save
--npm install --save datatables.net-bs4
--npm install @types/jquery --save-dev
--npm install @types/datatables.net --save-dev
+
+- npm install jquery --save
+- npm install datatables.net --save
+- npm install angular-datatables --save
+- npm install --save datatables.net-bs4
+- npm install @types/jquery --save-dev
+- npm install @types/datatables.net --save-dev
 
 ## <a href="#jwt">JWT Interceptors</a>
 @todo
