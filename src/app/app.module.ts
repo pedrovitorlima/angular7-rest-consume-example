@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +13,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AlertComponent } from './components/alert/alert.component';
 import { AlertService } from './services/alert.service';
 import { DataTablesModule } from 'angular-datatables';
+import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './components/login/auth-guard';
+import { TokenInterceptor } from './components/login/security.interceptor';
+import { TokenStorage } from './components/login/token-storage';
 
 
 
@@ -23,7 +27,8 @@ import { DataTablesModule } from 'angular-datatables';
     NavbarComponent,
     CreateProductComponent,
     ListProductComponent,
-    AlertComponent
+    AlertComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +40,10 @@ import { DataTablesModule } from 'angular-datatables';
   ],
   providers: [
     HttpClient,
-    AlertService
+    AuthGuard,
+    TokenStorage,
+    AlertService,
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true},
   ],
   bootstrap: [AppComponent]
 })

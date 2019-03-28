@@ -13,14 +13,12 @@ export class CreateProductComponent implements OnInit {
 
   private createProductURL = 'http://localhost:8080/products'; 
   private productForm: FormGroup;
-  errorMessages: string[];
   submitted = false;
 
   constructor(
     private alertService: AlertService,
     private http: HttpClient, 
     private formBuilder: FormBuilder,
-    private AlertService: AlertService,
     private router: Router) { }
 
   ngOnInit() {
@@ -43,9 +41,7 @@ export class CreateProductComponent implements OnInit {
     
     let formRaw = this.productForm.getRawValue();
     let productJSON = JSON.stringify(formRaw);
-    
-    // let productJSON = JSON.stringify(fakeForm);
-    
+            
     let jsonHeader = new HttpHeaders({'Content-Type': "application/json"});
 
     this.http.post(this.createProductURL, productJSON, {headers: jsonHeader})

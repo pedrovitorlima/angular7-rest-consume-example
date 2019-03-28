@@ -1,0 +1,38 @@
+<br />
+<form class="container" [formGroup]="loginForm" (ngSubmit)="tryLogin()">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input  type="text" 
+            class="form-control" 
+            id="username" 
+            formControlName="username">
+    
+    <div *ngIf="submitted && f.username.errors">
+      <small  class="form-text text-mutted" 
+              style="color: red;" 
+              *ngIf="f.username.errors.required">
+          Username is required.
+      </small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input  type="password" 
+            class="form-control" 
+            id="password" 
+            formControlName="password">
+
+    <div *ngIf="submitted && f.password.errors">
+      <small  class="form-text text-mutted" 
+              style="color: red;" 
+              *ngIf="f.password.errors.required">
+          Password is required.
+      </small>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <button class ="btn btn-primary">Login</button>
+  </div>
+</form>
